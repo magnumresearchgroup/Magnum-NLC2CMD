@@ -5,7 +5,7 @@
 
 Magnum-NLC2CMD is the winning solution for the **[NeurIPS 2020 NLC2CMD challenge]**. The solution was produced by Quchen Fu and Zhongwei Teng, researchers in the **[Magnum Research Group]** at Vanderbilt University. The Magnum Research Group is part of the **[Institute for Software Integrated Systems]**. 
 
-The NLC2CMD Competition challenges you to build an algorithm that can translate an English description (𝑛𝑙𝑐) of a command line task to its corresponding command line syntax (𝑐). The model achieved a 0.53 score in Accuracy Track on the open **[Leaderboard]**. The  **[tellina]** model was the previous SOTA which was used as the baseline.
+The NLC2CMD Competition challenges you to build an algorithm that can translate an English description (𝑛𝑙𝑐) of a command line task to its corresponding command line syntax (𝑐). The model achieved a 0.53 score in Accuracy Track on the open **[Leaderboard]**. The  **[Tellina]** model was the previous SOTA which was used as the baseline.
 <p align="left">
 <img width="650" alt="Screen Shot 2020-11-23 at 3 38 13 PM" src="https://user-images.githubusercontent.com/31392274/100018358-f34fa600-2da1-11eb-94c6-b848c774aca9.png">
 </p>

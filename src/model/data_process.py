@@ -9,7 +9,7 @@ def tokenize_eng(text):
     return tokenizer.ner_tokenizer(text)[0]
 
 def tokenize_bash(text):
-    return bash_tokenizer(text,  loose_constraints=True, arg_type_only=False)
+    return bash_tokenizer(text,  loose_constraints=True, arg_type_only=True)
 
 
 def preprocess(data_dir, data_file):
