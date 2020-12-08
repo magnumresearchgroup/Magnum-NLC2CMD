@@ -1,0 +1,4 @@
+[submodule "src/model/utils/nlc2cmd"]
+	path = src/model/utils/nlc2cmd
+	url = https://github.com/IBM/clai.git
+	branch = nlc2cmd

@@ -1,7 +1,8 @@
 import sys
 import os
 
-sys.path.append('{}/src/model/utils/metric'.format(os.path.abspath(os.getcwd())))
+sys.path.append('{}/src/model/utils/nlc2cmd/utils/metric'.format(os.path.abspath(os.getcwd())))
+sys.path.append('{}/src/model/utils/nlc2cmd/tellina-baseline/src'.format(os.path.abspath(os.getcwd())))
 
 import argparse
 import time
@@ -12,12 +13,11 @@ import traceback
 import experiment_impact_tracker
 from experiment_impact_tracker import compute_tracker
 from experiment_impact_tracker.compute_tracker import ImpactTracker
-import src.model.predict as predictor
-from src.model.utils.dataset import Nlc2CmdDS
-from src.model.utils.dataloaders import Nlc2CmdDL
-from src.model.utils.metric.metric_utils import compute_metric
+from utils.dataset import Nlc2CmdDS
+from utils.dataloaders import Nlc2CmdDL
+from metric_utils import compute_metric
 from src.model import data_process
-
+import src.model.predict as predictor
 
 def get_parser():
     parser = argparse.ArgumentParser()

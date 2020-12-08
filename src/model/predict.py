@@ -1,4 +1,4 @@
-from .utils.nlp_tools import tokenizer
+from submission_code.nlp_tools import tokenizer
 from onmt.translate.translator import build_translator
 from argparse import Namespace
 import math

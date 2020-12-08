@@ -1,8 +1,8 @@
 import json
 import random
 import os
-from src.model.utils.metric.bashlint.data_tools import bash_tokenizer
-from src.model.utils.nlp_tools import tokenizer
+from bashlint.data_tools import bash_tokenizer
+from submission_code.nlp_tools import tokenizer
 
 
 def tokenize_eng(text):
