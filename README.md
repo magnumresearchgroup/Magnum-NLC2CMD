@@ -44,6 +44,7 @@ The NLC2CMD Competition challenges you to build an algorithm that can translate 
 ### Environment
 1. Create a virtual environment with python3.6 installed(`virtualenv`)
 2. use `pip3 install -r requirements.txt` to install the two requirements files.
+3. git clone --recursive https://github.com/magnumresearchgroup/Magnum-NLC2CMD.git
 
 ### Data pre-processing
 1. Run `python3 main.py --mode preprocess --data_dir src/data --data_file nl2bash-data.json` and `cd src/model && onmt_build_vocab -config nl2cmd.yaml -n_sample 10347 --src_vocab_threshold 2 --tgt_vocab_threshold 2` to process raw data.
