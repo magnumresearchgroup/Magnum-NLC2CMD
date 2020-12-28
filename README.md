@@ -43,7 +43,7 @@ The NLC2CMD Competition challenges you to build an algorithm that can translate 
 
 ### Environment
 1. Create a virtual environment with python3.6 installed(`virtualenv`)
-2. git clone --recursive https://github.com/magnumresearchgroup/Magnum-NLC2CMD.git
+2. `git clone --recursive https://github.com/magnumresearchgroup/Magnum-NLC2CMD.git`
 3. use `pip3 install -r requirements.txt` to install the two requirements files.
 
 
