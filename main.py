@@ -15,7 +15,7 @@ from experiment_impact_tracker import compute_tracker
 from experiment_impact_tracker.compute_tracker import ImpactTracker
 from utils.dataset import Nlc2CmdDS
 from utils.dataloaders import Nlc2CmdDL
-from metric_utils import compute_metric
+from utils.metric_utils import compute_metric
 from src.model import data_process
 import src.model.predict as predictor
 
