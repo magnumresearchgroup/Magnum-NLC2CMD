@@ -62,7 +62,7 @@ The NLC2CMD Competition challenges you to build an algorithm that can translate 
 
 ### Evaluate
 1. `python3 main.py --mode eval --annotation_filepath src/data/test_data.json --params_filepath src/configs/core/evaluation_params.json --output_folderpath src/logs --model_dir src/model/run  --model_file model_step_2400.pt model_step_2500.pt`
-2. You can change the `gpu=-1` in `main.py` to `gpu=0`, and replace the code in `main.py` accordingly with the following code for faster inference time
+2. You can change the `gpu=-1` in `src/model/predict.py` to `gpu=0`, and replace the code in `src/model/predict.py` accordingly with the following code for faster inference time
     <details><summary>Show details</summary>
     <p>
     
