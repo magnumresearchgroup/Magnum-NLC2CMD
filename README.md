@@ -1,3 +1,4 @@
+<!---
 # <img src="https://www.magnum.io/img/magnum.png" width="24" height="24"> Magnum-NLC2CMD 
 
 <img src="https://evalai.s3.amazonaws.com/media/logos/4c055dbb-a30a-4aa1-b86b-33dd76940e14.jpg" align="right"
@@ -15,6 +16,7 @@ The NLC2CMD Competition challenges you to build an algorithm that can translate 
 [Institute for Software Integrated Systems]:https://www.isis.vanderbilt.edu
 [leaderboard]: https://eval.ai/web/challenges/challenge-page/674/leaderboard/1831
 [tellina]: https://github.com/IBM/clai/tree/master/clai/server/plugins/tellina
+--->
 
 ## Requirements
 <details><summary>Show details</summary>
