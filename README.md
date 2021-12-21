@@ -110,4 +110,15 @@ This work was supported in part by NSF Award# 1552836, At-scale analysis of issu
 
 See the [LICENSE](https://github.com/QuchenFu/Magnum-NLC2CMD/blob/final/LICENSE) file for license rights and limitations (MIT).
 
+## Reference
+If you use this repository, please consider citing:
 
+```
+@article{Fu2021ATransform,
+  title={A Transformer-based Approach for Translating Natural Language to Bash Commands},
+  author={Quchen Fu and Zhongwei Teng and Jules White and Douglas C. Schmidt},
+  journal={2021 20th IEEE International Conference on Machine Learning and Applications (ICMLA)},
+  year={2021},
+  pages={1241-1244}
+}
+```
