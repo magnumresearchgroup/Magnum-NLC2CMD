@@ -17,6 +17,7 @@ from utils.dataset import Nlc2CmdDS
 from utils.dataloaders import Nlc2CmdDL
 from utils.metric_utils import compute_metric
 from src.model import data_process
+from src.model import post_process
 import src.model.predict as predictor
 
 def get_parser():
@@ -220,6 +221,8 @@ if __name__ == '__main__':
         pass
     elif args.mode == 'preprocess':
         data_process.preprocess(args.data_dir, args.data_file)
+    elif args.mode == 'postprocess':
+        post_process.post_process()
 
     if args.mode in ['eval', 'energy']:
         os.makedirs(args.output_folderpath, exist_ok=True)
