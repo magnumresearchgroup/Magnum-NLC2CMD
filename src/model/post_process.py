@@ -23,16 +23,13 @@ def post_process():
     with open('pred_2000.txt') as f:
         bash_preds = f.read().split('\n')
 
-    english_text = []
-    for i in test_data:
-        english_text.append(test_data[i]["invocation"])
+    english_text = [test_data[i]["invocation"] for i in test_data]
 
     replaced_bash = []
     for text, cmd in zip(english_text, bash_preds):
-        rep_cmd = cmd
         for argument, filler in list(tokenizer.ner_tokenizer(text)[1][0].values()):
-            rep_cmd = rep_cmd.replace(MAPPING[filler], argument, 1)
-        replaced_bash.append(rep_cmd)
+            cmd = cmd.replace(MAPPING[filler], argument, 1)
+        replaced_bash.append(cmd)
 
     with open('replaced_pred_2000.txt', 'w') as f:
         f.write("\n".join(replaced_bash))
