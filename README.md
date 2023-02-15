@@ -111,7 +111,7 @@ This work was supported in part by NSF Award# 1552836, At-scale analysis of issu
 See the [LICENSE](https://github.com/QuchenFu/Magnum-NLC2CMD/blob/final/LICENSE) file for license rights and limitations (MIT).
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=magnumresearchgroup/Magnum-NLC2CMD&type=Date)](https://star-history.com/#magnumresearchgroup/Magnum-NLC2CMD&Date)
+[![Star History Chart]](https://star-history.com/#magnumresearchgroup/Magnum-NLC2CMD&Date)
 
 ## Reference
 If you use this repository, please consider citing:
