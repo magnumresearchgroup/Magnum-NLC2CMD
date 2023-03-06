@@ -19,6 +19,22 @@ The NLC2CMD Competition challenges you to build an algorithm that can translate 
 --->
 [chatGPT achieved an accuracy score of 80.6% on the test set under zeroshot conditions]: https://arxiv.org/abs/2302.07845
 
+## Rethinking NL2CMD in the age of ChatGPT 
+
+There is a widespread belief among experts that the field of natural language processing (NLP) is currently experiencing a paradigm shift as a result of the introduction of LLM (Large Language Models), with chatGPT being the leading example of this new technology. With this new technology, many tasks that previously relied on fine-tuning pre-trained models can now be achieved through prompt engineering, which involves identifying the appropriate instructions to direct the language model (LLM) for specific tasks. To evaluate the effectiveness of chatGPT, we conducted tests on the original NL2BASH dataset, and the results were exceptional. Specifically, we found that **[chatGPT achieved an accuracy score of 80.6% on the test set under zeroshot conditions]**. Although there are concerns about the possibility of data leakage in LLM-based translation due to the vast amount of internet text in the pre-training data, we have confidence in the performance of chatGPT, given its consistent ability to achieve scores of 80% or higher across all training, testing, and evaluation datasets. 
+
+<p align="center">
+<img width="500" alt="pipeline" src="https://user-images.githubusercontent.com/31392274/223152672-4704ed94-83d1-4ff2-93d2-14dab48ab748.png">
+</p>
+
+We have conducted further exploration into the potential of streamlining our data generation pipeline with the assistance of ChatGPT, as shown in Figure. In order to generate Bash commands, we utilized the prompt Generate bash command and do not include example. We set the ”temperature” parameter to 1 for maximum variability. These generated commands were then subjected to a de-duplication script, resulting in a surprisingly low duplicate rate of 6% despite prompting the system 44671 times. Subsequently, the data were validated using the same bash parsing tool previously mentioned, and 41.7% of the generated bash commands were deemed valid. The preprocessed bash commands were combined with the prompt Translate to English, yielding a paired English-Bash dataset with a size of 17050. We set the temperature parameter to 0 for reproduciblity. 
+
+In order to assess the quality of this generated dataset, we tested the performance of augmenting the original dataset with the generated version NL2CMD: An Updated Workflow for Natural Language to Bash Commands Translation 31 and found no performance drop. We further tested this approach by setting the temperature parameter to 1 to introduce more variability, which yielded different English sentences for each Bash command, serving as a useful data augmentation tool. 
+
+This suggests that the ChatGPT-generated dataset is of higher quality than our previous pipeline. Furthermore, the performance of training on generated data and evaluating on NL2Bash was greatly improved, with the score increasing from -13% to approximately 10%. It is important to note that this is only a preliminary exploration into using ChatGPT as a data generation tool, and our observations represent a lower-bound on the potential benefits of this method. 
+
+What is particularly groundbreaking about this approach is the efficiency with which it was implemented. Whereas the previous pipeline took two months to build, the ChatGPT streamlined version was completed in just three days. We have made our code and dataset available on Github. Notably, the distribution of generated utilities displayed a much smaller long tail effect, suggesting that it more accurately captures the command usage distribution.
+
 ## Requirements
 <details><summary>Show details</summary>
 <p>
@@ -98,24 +114,6 @@ The NLC2CMD Competition challenges you to build an algorithm that can translate 
 ### New dataset
 
 https://github.com/magnumresearchgroup/bash_gen
-
-
-## Rethinking NL2CMD in the age of ChatGPT 
-
-There is a widespread belief among experts that the field of natural language processing (NLP) is currently experiencing a paradigm shift as a result of the introduction of LLM (Large Language Models), with chatGPT being the leading example of this new technology. With this new technology, many tasks that previously relied on fine-tuning pre-trained models can now be achieved through prompt engineering, which involves identifying the appropriate instructions to direct the language model (LLM) for specific tasks. To evaluate the effectiveness of chatGPT, we conducted tests on the original NL2BASH dataset, and the results were exceptional. Specifically, we found that **[chatGPT achieved an accuracy score of 80.6% on the test set under zeroshot conditions]**. Although there are concerns about the possibility of data leakage in LLM-based translation due to the vast amount of internet text in the pre-training data, we have confidence in the performance of chatGPT, given its consistent ability to achieve scores of 80% or higher across all training, testing, and evaluation datasets. 
-
-<p align="center">
-<img width="500" alt="pipeline" src="https://user-images.githubusercontent.com/31392274/223152672-4704ed94-83d1-4ff2-93d2-14dab48ab748.png">
-</p>
-
-We have conducted further exploration into the potential of streamlining our data generation pipeline with the assistance of ChatGPT, as shown in Figure. In order to generate Bash commands, we utilized the prompt Generate bash command and do not include example. We set the ”temperature” parameter to 1 for maximum variability. These generated commands were then subjected to a de-duplication script, resulting in a surprisingly low duplicate rate of 6% despite prompting the system 44671 times. Subsequently, the data were validated using the same bash parsing tool previously mentioned, and 41.7% of the generated bash commands were deemed valid. The preprocessed bash commands were combined with the prompt Translate to English, yielding a paired English-Bash dataset with a size of 17050. We set the temperature parameter to 0 for reproduciblity. 
-
-In order to assess the quality of this generated dataset, we tested the performance of augmenting the original dataset with the generated version NL2CMD: An Updated Workflow for Natural Language to Bash Commands Translation 31 and found no performance drop. We further tested this approach by setting the temperature parameter to 1 to introduce more variability, which yielded different English sentences for each Bash command, serving as a useful data augmentation tool. 
-
-This suggests that the ChatGPT-generated dataset is of higher quality than our previous pipeline. Furthermore, the performance of training on generated data and evaluating on NL2Bash was greatly improved, with the score increasing from -13% to approximately 10%. It is important to note that this is only a preliminary exploration into using ChatGPT as a data generation tool, and our observations represent a lower-bound on the potential benefits of this method. 
-
-What is particularly groundbreaking about this approach is the efficiency with which it was implemented. Whereas the previous pipeline took two months to build, the ChatGPT streamlined version was completed in just three days. We have made our code and dataset available on Github. Notably, the distribution of generated utilities displayed a much smaller long tail effect, suggesting that it more accurately captures the command usage distribution.
-
 
 ## References
 
