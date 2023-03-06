@@ -129,3 +129,11 @@ If you use this repository, please consider citing:
   pages={1241-1244}
 }
 ```
+```
+@article{fu2023nl2cmd,
+  title={NL2CMD: An Updated Workflow for Natural Language to Bash Commands Translation},
+  author={Fu, Quchen and Teng, Zhongwei and Georgaklis, Marco and White, Jules and Schmidt, Douglas C},
+  journal={Journal of Machine Learning Theory, Applications and Practice},
+  pages={45--82},
+  year={2023}
+}
