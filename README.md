@@ -94,6 +94,10 @@ The NLC2CMD Competition challenges you to build an algorithm that can translate 
 2. Train multiple models by modify `seed` in `nl2cmd.yaml`, you should also modify the `save_model` to avoid overwrite existing models.
 3. Hand pick the best performed ones on local test set and put their directories in the main.py
 
+### New dataset
+
+https://github.com/magnumresearchgroup/bash_gen
+
 ## References
 
 * [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py)
