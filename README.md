@@ -17,6 +17,7 @@ The NLC2CMD Competition challenges you to build an algorithm that can translate 
 [leaderboard]: https://eval.ai/web/challenges/challenge-page/674/leaderboard/1831
 [tellina]: https://github.com/IBM/clai/tree/master/clai/server/plugins/tellina
 --->
+
 [chatGPT achieved an accuracy score of 80.6% on the test set under zeroshot conditions]: https://arxiv.org/abs/2302.07845
 
 ## Rethinking NL2CMD in the age of ChatGPT 
